@@ -133,22 +133,16 @@ html.lenis, html.lenis body {
 /* Falling logos animation */
 @keyframes fall {
   0% {
-    transform: translateY(-100px) rotate(0deg);
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
+    transform: translateY(-100%) rotate(0deg);
   }
   100% {
     transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
   }
 }
 
 .falling-logo {
+  position: absolute;
+  top: 0;
   animation: fall linear infinite;
   will-change: transform;
 }
