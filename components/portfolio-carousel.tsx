@@ -11,7 +11,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 1, title: "Project One", image: "/Layers Package-28.png" },
+  { id: 1, title: "Project One", image: "/vercel/share/v0-project/public/Layers Package-28.png" },
   { id: 2, title: "Project Two", image: "/placeholder.svg" },
   { id: 3, title: "Project Three", image: "/placeholder.svg" },
   { id: 4, title: "Project Four", image: "/placeholder.svg" },
