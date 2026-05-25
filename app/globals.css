@@ -129,3 +129,61 @@ html.lenis, html.lenis body {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+/* Falling logos animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.falling-logo {
+  animation: fall linear infinite;
+}
+
+/* Premium animated gradient text */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.2) saturate(1.1);
+  }
+  100% {
+    filter: brightness(1) saturate(1);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #c0c0c0 15%,
+    #ffffff 30%,
+    #e8e8e8 45%,
+    #b8b8b8 60%,
+    #ffffff 75%,
+    #d4d4d4 90%,
+    #ffffff 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 8s ease infinite, shimmer 4s ease-in-out infinite;
+}
