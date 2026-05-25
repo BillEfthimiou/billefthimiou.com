@@ -61,6 +61,7 @@
   html {
     background-color: #111111;
     color-scheme: dark;
+    zoom: 1.15;
   }
   body {
     @apply bg-background text-foreground;

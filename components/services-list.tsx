@@ -8,19 +8,19 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: "Web Development",
+    title: "Brand Identities",
     description:
-      "High quality websites tailored to your custom liking, ranging from landing pages all the way to full-stack applications!",
+      "A whole branding package, including everything a community would need, such as server banners, embed banners, footers, log variants and much more at an affordable price.",
     popular: true,
   },
   {
-    title: "Design",
+    title: "Banners",
     description:
-      "High quality design work, built to stand out, ranging from logos to complete brand identities.",
+      "High quality banners tailored to your liking. Those banners range from simple embed banners to stunning server banners.",
     popular: true,
   },
   {
-    title: "Consulting",
+    title: "",
     description:
       "A complete service, including strategy, implementation, and ongoing support all at a competitive price!",
     popular: true,

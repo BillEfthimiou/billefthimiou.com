@@ -9,7 +9,7 @@ export function Hero() {
           Bill&apos;s Studio
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
-          I specialize in custom solutions, whether it&apos;s web development, design, or a whole branding bundle tailored to your needs.
+          We specialize in graphics, from simple logos to complex brand identities taliored to your needs.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button

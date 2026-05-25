@@ -29,19 +29,19 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Bill&apos;s Studio. All rights reserved.
+            © {new Date().getFullYear()} Bill's Studio, All Rights Reserved.
           </p>
 
           {/* Credit */}
           <p className="text-sm text-muted-foreground">
-            Made with{" "}
+            {" "}
             <Link
               href="https://v0.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:underline"
             >
-              v0
+              
             </Link>
           </p>
         </div>
