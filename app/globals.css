@@ -132,7 +132,7 @@ html.lenis, html.lenis body {
 
 /* Falling logos animation */
 @keyframes fall {
-  0% {
+  50% {
     transform: translateY(-100%) rotate(0deg);
   }
   100% {
