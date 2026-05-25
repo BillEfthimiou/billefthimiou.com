@@ -22,7 +22,7 @@ export function Navbar() {
       <nav className="bg-card/80 backdrop-blur-md border border-border rounded-full px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Logo className="h-8 w-8 text-foreground" />
+          <img src="/logo.png" alt="Bill's Studio" className="h-8 w-8" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ export function Navbar() {
             variant="outline"
             className="rounded-full border-border hover:bg-secondary"
           >
-            <Link href="/contact">Order Now</Link>
+            <a href="https://discord.gg/DKs2K8Gfjs" target="_blank" rel="noopener noreferrer">Order Now</a>
           </Button>
         </div>
 
@@ -88,9 +88,9 @@ export function Navbar() {
               variant="outline"
               className="rounded-full border-border hover:bg-secondary"
             >
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <a href="https://discord.gg/DKs2K8Gfjs" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                 Order Now
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
@@ -99,16 +99,4 @@ export function Navbar() {
   );
 }
 
-function Logo({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M16 2C16 2 8 8 8 16C8 20.4183 11.5817 24 16 24C20.4183 24 24 20.4183 24 16C24 8 16 2 16 2Z" />
-      <path d="M16 8C16 8 12 12 12 16C12 18.2091 13.7909 20 16 20C18.2091 20 20 18.2091 20 16C20 12 16 8 16 8Z" fill="currentColor" opacity="0.5" />
-    </svg>
-  );
-}
+

@@ -6,7 +6,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center px-6 pt-24">
       <div className="max-w-3xl mx-auto text-center">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 text-balance">
-          Bill Efthimiou
+          Bill&apos;s Studio
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
           I specialize in custom solutions, whether it&apos;s web development, design, or a whole branding bundle tailored to your needs.

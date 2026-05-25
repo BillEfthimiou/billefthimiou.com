@@ -12,7 +12,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col items-center gap-6">
           {/* Logo */}
-          <Logo className="h-10 w-10 text-foreground" />
+          <img src="/logo.png" alt="Bill's Studio" className="h-10 w-10" />
 
           {/* Navigation */}
           <nav className="flex items-center gap-6">
@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Bill Efthimiou. All rights reserved.
+            © {new Date().getFullYear()} Bill&apos;s Studio. All rights reserved.
           </p>
 
           {/* Credit */}
@@ -50,16 +50,4 @@ export function Footer() {
   );
 }
 
-function Logo({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M16 2C16 2 8 8 8 16C8 20.4183 11.5817 24 16 24C20.4183 24 24 20.4183 24 16C24 8 16 2 16 2Z" />
-      <path d="M16 8C16 8 12 12 12 16C12 18.2091 13.7909 20 16 20C18.2091 20 20 18.2091 20 16C20 12 16 8 16 8Z" fill="currentColor" opacity="0.5" />
-    </svg>
-  );
-}
+
