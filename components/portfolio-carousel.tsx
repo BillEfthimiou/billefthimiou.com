@@ -1,0 +1,89 @@
+"use client";
+
+import { useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { cn } from "@/lib/utils";
+
+interface Project {
+  id: number;
+  title: string;
+  image: string;
+}
+
+const projects: Project[] = [
+  { id: 1, title: "Project One", image: "/placeholder.svg" },
+  { id: 2, title: "Project Two", image: "/placeholder.svg" },
+  { id: 3, title: "Project Three", image: "/placeholder.svg" },
+  { id: 4, title: "Project Four", image: "/placeholder.svg" },
+  { id: 5, title: "Project Five", image: "/placeholder.svg" },
+  { id: 6, title: "Project Six", image: "/placeholder.svg" },
+];
+
+export function PortfolioCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  // Listen for select events
+  if (emblaApi) {
+    emblaApi.on("select", onSelect);
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="embla overflow-hidden rounded-xl" ref={emblaRef}>
+        <div className="embla__container flex">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="embla__slide flex-[0_0_100%] min-w-0"
+            >
+              <div className="relative aspect-[16/9] bg-card border border-border rounded-xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary to-card flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="w-24 h-24 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center">
+                      <span className="text-3xl font-bold text-muted-foreground">
+                        {project.id}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">
+                      {project.title}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dots navigation */}
+      <div className="flex justify-center gap-2">
+        {projects.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={cn(
+              "transition-all duration-300",
+              selectedIndex === index
+                ? "w-8 h-2 bg-foreground rounded-full"
+                : "w-2 h-2 bg-muted-foreground/40 rounded-full hover:bg-muted-foreground/60"
+            )}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
