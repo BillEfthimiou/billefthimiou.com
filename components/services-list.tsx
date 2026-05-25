@@ -20,25 +20,25 @@ const services: Service[] = [
     popular: true,
   },
   {
-    title: "",
+    title: "Logos",
     description:
-      "A complete service, including strategy, implementation, and ongoing support all at a competitive price!",
+      "High quality logos,from design communities to roleplay servers, that will set you server apart from the others.",
     popular: true,
   },
   {
-    title: "Branding",
+    title: "Emojis",
     description:
-      "Brand assets tailored to your custom style and preferences to match your vision.",
+      "Essential emojis that will enhance the quality of your server..",
   },
   {
-    title: "UI/UX",
+    title: "Role Icons",
     description:
-      "User interfaces built to be intuitive and clean, whether it's a mobile app or web platform.",
+      "Icons that will help organize your server as well as make each role pop out.",
   },
   {
-    title: "Other",
+    title: "Misc",
     description:
-      "Some other services we offer such as content creation, marketing support, and much more.",
+      "Other graphic services we provide, such as welcome stickers and much. more that are essential for your servers public image..",
   },
 ];
 
