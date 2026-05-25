@@ -130,22 +130,6 @@ html.lenis, html.lenis body {
   min-width: 0;
 }
 
-/* Falling logos animation */
-@keyframes fall {
-  50% {
-    transform: translateY(-100%) rotate(0deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-  }
-}
-
-.falling-logo {
-  position: absolute;
-  top: 0;
-  animation: fall linear infinite;
-  will-change: transform;
-}
 
 /* Premium animated gradient text */
 @keyframes gradient-shift {
