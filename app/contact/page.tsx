@@ -49,10 +49,10 @@ export default function ContactPage() {
           <p className="text-sm text-muted-foreground">
             Prefer email?{" "}
             <Link
-              href="mailto:hello@billstudio.com"
+              href="mailto:me@billefthimiou.com"
               className="text-foreground hover:underline"
             >
-              hello@billstudio.com
+              me@billefthimiou
             </Link>
           </p>
         </div>
