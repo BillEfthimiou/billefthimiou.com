@@ -1,10 +1,8 @@
 "use client";
 
-"use client";
-
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image"; // 1. Added the Next.js Image import
+import Image from "next/image"; 
 import { cn } from "@/lib/utils";
 
 interface Project {
@@ -14,8 +12,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  // Make sure your renamed file matches this exactly
-  { id: 1, title: "Branding Package", image: "/LayersPackage-28.png" }, 
+  { id: 1, title: "Branding Package", image: "/Layers Package-28.png" }, 
   { id: 2, title: "Celebration Banner", image: "/Celebration Banner Redbakery ENG.png" },
   { id: 3, title: "Welcome Banner", image: "/Welcome to HCSO.PNG" },
   { id: 4, title: "Embed Banner", image: "/Dashboard for Bill Commisions.PNG" },
@@ -24,7 +21,7 @@ const projects: Project[] = [
 ];
 
 export function PortfolioCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollTo = useCallback(
@@ -39,35 +36,35 @@ export function PortfolioCarousel() {
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
-  // Listen for select events
-  if (emblaApi) {
+  useEffect(() => {
+    if (!emblaApi) return;
     emblaApi.on("select", onSelect);
-  }
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="space-y-6">
-      <div className="embla overflow-hidden rounded-xl" ref={emblaRef}>
+      <div className="embla overflow-hidden rounded-xl touch-pan-y" ref={emblaRef}>
         <div className="embla__container flex">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="embla__slide flex-[0_0_100%] min-w-0"
+              className="embla__slide flex-[0_0_100%] min-w-0 w-full"
             >
-              {/* 2. Added relative property here so Next.js Image can fill it correctly */}
-              <div className="relative aspect-[16/9] bg-card border border-border rounded-xl overflow-hidden group">
+              <div className="relative aspect-[16/9] bg-neutral-950 border border-border rounded-xl overflow-hidden group">
                 
-                {/* 3. The actual image renderer */}
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-contain p-2"
                   priority={project.id === 1}
                 />
 
-                {/* 4. Text Overlay wrapper (Adds dark scrim so text remains readable) */}
-                <div className="absolute inset-0 bg-black/40 flex items-end p-8">
-                  <h3 className="text-xl font-semibold text-white">
+                <div className="absolute inset-0 bg-black/40 flex items-end p-4 sm:p-8">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">
                     {project.title}
                   </h3>
                 </div>
@@ -78,7 +75,6 @@ export function PortfolioCarousel() {
         </div>
       </div>
 
-      {/* Dots navigation */}
       <div className="flex justify-center gap-2">
         {projects.map((_, index) => (
           <button
@@ -97,4 +93,3 @@ export function PortfolioCarousel() {
     </div>
   );
 }
-
