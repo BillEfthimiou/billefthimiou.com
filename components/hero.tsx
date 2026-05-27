@@ -3,17 +3,13 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    // Changed:
-    // 1. Replaced 'items-center' with 'items-start' to align content to the top.
-    // 2. Increased top padding ('pt-32 md:pt-48') to control how high the content sits,
-    //    removing the bottom padding. This makes the content appear higher up on the screen.
-    // 3. Removed 'relative overflow-hidden' as they were needed for the absolute-positioned logos.
-    <section className="min-h-screen flex items-start justify-center px-6 pt-32 md:pt-48">
-      {/* Removed the entire 'Falling logos background' div and the 'fallingLogos' array mapping.
-         The z-index ('z-10') and absolute positioning on this content container are also no longer necessary.
-      */}
-
-      <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+    // Restored flex items-center and justify-center to give it breathing room,
+    // but reduced min-h-screen to min-h-[85vh] so it naturally sits higher up on the glass.
+    <section className="min-h-[85vh] w-full flex items-center justify-center px-6 pt-16">
+      
+      {/* -mt-16 to -mt-24 pulls the entire text block up slightly to offset the browser address bars,
+          giving you that higher visual center without ruining the alignment. */}
+      <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center -mt-16 md:-mt-24">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-balance gradient-text-premium">
           Bill&apos;s Studio
         </h1>
