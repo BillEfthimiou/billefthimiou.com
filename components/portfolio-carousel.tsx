@@ -1,7 +1,10 @@
 "use client";
 
+"use client";
+
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image"; // 1. Added the Next.js Image import
 import { cn } from "@/lib/utils";
 
 interface Project {
@@ -11,7 +14,8 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 1, title: "Project One", image: "/LayersPackage-28.png" },
+  // Make sure your renamed file matches this exactly
+  { id: 1, title: "Project One", image: "/LayersPackage-28.png" }, 
   { id: 2, title: "Project Two", image: "/placeholder.svg" },
   { id: 3, title: "Project Three", image: "/placeholder.svg" },
   { id: 4, title: "Project Four", image: "/placeholder.svg" },
@@ -49,19 +53,25 @@ export function PortfolioCarousel() {
               key={project.id}
               className="embla__slide flex-[0_0_100%] min-w-0"
             >
-              <div className="relative aspect-[16/9] bg-card border border-border rounded-xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary to-card flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center">
-                      <span className="text-3xl font-bold text-muted-foreground">
-                        {project.id}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {project.title}
-                    </h3>
-                  </div>
+              {/* 2. Added relative property here so Next.js Image can fill it correctly */}
+              <div className="relative aspect-[16/9] bg-card border border-border rounded-xl overflow-hidden group">
+                
+                {/* 3. The actual image renderer */}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority={project.id === 1}
+                />
+
+                {/* 4. Text Overlay wrapper (Adds dark scrim so text remains readable) */}
+                <div className="absolute inset-0 bg-black/40 flex items-end p-8">
+                  <h3 className="text-xl font-semibold text-white">
+                    {project.title}
+                  </h3>
                 </div>
+
               </div>
             </div>
           ))}
@@ -87,3 +97,4 @@ export function PortfolioCarousel() {
     </div>
   );
 }
+
