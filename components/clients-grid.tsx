@@ -3,14 +3,14 @@ interface Client {
 }
 
 const clients: Client[] = [
-  { name: "Client One" },
-  { name: "Client Two" },
-  { name: "Client Three" },
-  { name: "Client Four" },
-  { name: "Client Five" },
-  { name: "Client Six" },
-  { name: "Client Seven" },
-  { name: "Client Eight" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
 ];
 
 export function ClientsGrid() {
