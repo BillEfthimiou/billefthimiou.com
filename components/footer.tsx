@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Bill's Studio, All Rights Reserved.
+            © {new Date().getFullYear()} Bill's Studio, All Rights Reserved
           </p>
 
           {/* Credit */}
