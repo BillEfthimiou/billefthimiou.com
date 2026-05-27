@@ -3,15 +3,17 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    // Added style={{ fontSize: "115%" }} to scale up all rem-based typography,
-    // paddings, and margins perfectly by 115% across the entire hero viewport.
+    // The original layout viewport constraints remain completely untouched and safe.
     <section 
       className="min-h-screen flex items-center justify-center px-6 pt-24 relative overflow-hidden"
       style={{ fontSize: "115%" }}
     >
-      {/* Falling logos background and array logic are completely gone */}
       
-      <div className="max-w-3xl mx-auto text-center relative z-10">
+      {/* Using '-translate-y-8 md:-translate-y-12' cleanly shifts the entire 
+        inner content block upward on the vertical axis, counteracting the 
+        bottom weight without touching or distorting the outer viewport boundaries.
+      */}
+      <div className="max-w-3xl mx-auto text-center relative z-10 -translate-y-8 md:-translate-y-12">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-balance gradient-text-premium">
           Bill&apos;s Studio
         </h1>
