@@ -12,7 +12,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { id: 1, title: "Branding Package", image: "/LayerPackage-28.png" }, 
+  { id: 1, title: "Branding Package", image: "/LayersPackage-28.png" }, 
   { id: 2, title: "Celebration Banner", image: "/Celebration Banner Redbakery ENG.png" },
   { id: 3, title: "Welcome Banner", image: "/Welcome to HCSO.PNG" },
   { id: 4, title: "Embed Banner", image: "/Dashboard for Bill Commisions.PNG" },
