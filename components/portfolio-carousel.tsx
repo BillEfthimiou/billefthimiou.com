@@ -16,11 +16,11 @@ interface Project {
 const projects: Project[] = [
   // Make sure your renamed file matches this exactly
   { id: 1, title: "Branding Package", image: "/LayersPackage-28.png" }, 
-  { id: 2, title: "Project Two", image: "/placeholder.svg" },
-  { id: 3, title: "Project Three", image: "/placeholder.svg" },
-  { id: 4, title: "Project Four", image: "/placeholder.svg" },
-  { id: 5, title: "Project Five", image: "/placeholder.svg" },
-  { id: 6, title: "Project Six", image: "/placeholder.svg" },
+  { id: 2, title: "Celebration Banner", image: "/Celebration Banner Redbakery ENG.png" },
+  { id: 3, title: "Welcome Banner", image: "/Welcome to HCSO.PNG" },
+  { id: 4, title: "Embed Banner", image: "/Dashboard for Bill Commisions.PNG" },
+  { id: 5, title: "Embed Banner", image: "/Pensylvania State RP Dasjboard.PNG" },
+  { id: 6, title: "Embed Banner", image: "/Texas State RP Dashboard.png" },
 ];
 
 export function PortfolioCarousel() {
