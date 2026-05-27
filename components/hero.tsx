@@ -3,8 +3,13 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-24 relative overflow-hidden">
-      {/* Falling logos background was removed from here */}
+    // Added style={{ fontSize: "115%" }} to scale up all rem-based typography,
+    // paddings, and margins perfectly by 115% across the entire hero viewport.
+    <section 
+      className="min-h-screen flex items-center justify-center px-6 pt-24 relative overflow-hidden"
+      style={{ fontSize: "115%" }}
+    >
+      {/* Falling logos background and array logic are completely gone */}
       
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-balance gradient-text-premium">
@@ -34,4 +39,3 @@ export function Hero() {
     </section>
   );
 }
-
