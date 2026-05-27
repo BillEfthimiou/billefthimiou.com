@@ -13,7 +13,9 @@ const clients = [
 
 export function TrustedBy() {
   return (
-    <section className="py-24 px-6">
+    // Added '-mt-16 md:-mt-24' to cleanly pull this section upward closer to the hero section.
+    // Also changed 'py-24' to 'pb-24 pt-0' so we don't fight against our own top padding.
+    <section className="pb-24 px-6 -mt-16 md:-mt-24">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
           Trusted by 0+ clients.
