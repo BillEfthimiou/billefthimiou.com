@@ -1,24 +1,24 @@
+import React from 'react';
+
 const clients = [
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
+  { name: "Acme Corp", logo: "/logos/acme.svg" },
+  { name: "Globex", logo: "/logos/globex.svg" },
+  { name: "Initech", logo: "/logos/initech.svg" },
+  { name: "Umbrella Corp", logo: "/logos/umbrella.svg" },
+  { name: "Hooli", logo: "/logos/hooli.svg" },
+  { name: "Soylent", logo: "/logos/soylent.svg" },
+  { name: "Vehement", logo: "/logos/vehement.svg" },
+  { name: "Massive Dynamic", logo: "/logos/massive.svg" },
+  { name: "Cyberdyne", logo: "/logos/cyberdyne.svg" },
+  { name: "Tyrell Corp", logo: "/logos/tyrell.svg" },
 ];
 
 export function TrustedBy() {
   return (
-    // Removed the negative top margins entirely. 
-    // Re-introduced 'py-24' so the section sits comfortably below the Hero viewport fold.
     <section className="py-24 px-6 bg-background">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-          Trusted by 0+ clients.
+          Trusted by 10+ clients.
         </h2>
         <p className="text-muted-foreground mb-12">
           Delivering quality work across various projects.
@@ -36,11 +36,13 @@ export function TrustedBy() {
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={`row1-${index}`}
-                  className="flex-shrink-0 mx-4 w-24 h-16 bg-card border border-border rounded-lg flex items-center justify-center"
+                  className="flex-shrink-0 mx-4 w-32 h-16 bg-card border border-border rounded-lg flex items-center justify-center p-3"
                 >
-                  <span className="text-muted-foreground text-xs font-medium text-center px-2">
-                    {client}
-                  </span>
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`} 
+                    className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                  />
                 </div>
               ))}
             </div>
@@ -52,11 +54,13 @@ export function TrustedBy() {
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={`row2-${index}`}
-                  className="flex-shrink-0 mx-4 w-24 h-16 bg-card border border-border rounded-lg flex items-center justify-center"
+                  className="flex-shrink-0 mx-4 w-32 h-16 bg-card border border-border rounded-lg flex items-center justify-center p-3"
                 >
-                  <span className="text-muted-foreground text-xs font-medium text-center px-2">
-                    {client}
-                  </span>
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`} 
+                    className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-opacity" 
+                  />
                 </div>
               ))}
             </div>
