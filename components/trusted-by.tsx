@@ -1,16 +1,16 @@
 import React from 'react';
 
 const clients = [
-  { name: "Acme Corp", logo: "/logos/acme.svg", hoverLogo: "/logos/acme-hover.svg" },
-  { name: "Globex", logo: "/logos/globex.svg", hoverLogo: "/logos/globex-hover.svg" },
-  { name: "Initech", logo: "/logos/initech.svg", hoverLogo: "/logos/initech-hover.svg" },
-  { name: "Umbrella Corp", logo: "/logos/umbrella.svg", hoverLogo: "/logos/umbrella-hover.svg" },
-  { name: "Hooli", logo: "/logos/hooli.svg", hoverLogo: "/logos/hooli-hover.svg" },
-  { name: "Soylent", logo: "/logos/soylent.svg", hoverLogo: "/logos/soylent-hover.svg" },
-  { name: "Vehement", logo: "/logos/vehement.svg", hoverLogo: "/logos/vehement-hover.svg" },
-  { name: "Massive Dynamic", logo: "/logos/massive.svg", hoverLogo: "/logos/massive-hover.svg" },
-  { name: "Cyberdyne", logo: "/logos/cyberdyne.svg", hoverLogo: "/logos/cyberdyne-hover.svg" },
-  { name: "Tyrell Corp", logo: "/logos/tyrell.svg", hoverLogo: "/logos/tyrell-hover.svg" },
+  { name: "Acme Corp", logo: "/Layers Logo Transperant Background Removed.png" },
+  { name: "Globex", logo: "/redbakery logo.png.avif" },
+  { name: "Initech", logo: "/WS-4.png" },
+  { name: "Umbrella Corp", logo: "/logos/umbrella.svg" },
+  { name: "Hooli", logo: "/logos/hooli.svg" },
+  { name: "Soylent", logo: "/logos/soylent.svg" },
+  { name: "Vehement", logo: "/logos/vehement.svg" },
+  { name: "Massive Dynamic", logo: "/logos/massive.svg" },
+  { name: "Cyberdyne", logo: "/logos/cyberdyne.svg" },
+  { name: "Tyrell Corp", logo: "/logos/tyrell.svg" },
 ];
 
 export function TrustedBy() {
@@ -36,19 +36,12 @@ export function TrustedBy() {
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={`row1-${index}`}
-                  className="group flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center relative cursor-pointer"
+                  className="flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center cursor-pointer"
                 >
-                  {/* Default Logo */}
                   <img 
                     src={client.logo} 
                     alt={`${client.name} logo`} 
-                    className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-0 transition-opacity absolute inset-0 m-auto" 
-                  />
-                  {/* Hover Logo */}
-                  <img 
-                    src={client.hoverLogo} 
-                    alt={`${client.name} hover logo`} 
-                    className="max-w-full max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity absolute inset-0 m-auto" 
+                    className="max-w-full max-h-full object-contain opacity-35 hover:opacity-100 transition-opacity duration-300" 
                   />
                 </div>
               ))}
@@ -61,19 +54,12 @@ export function TrustedBy() {
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={`row2-${index}`}
-                  className="group flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center relative cursor-pointer"
+                  className="flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center cursor-pointer"
                 >
-                  {/* Default Logo */}
                   <img 
                     src={client.logo} 
                     alt={`${client.name} logo`} 
-                    className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-0 transition-opacity absolute inset-0 m-auto" 
-                  />
-                  {/* Hover Logo */}
-                  <img 
-                    src={client.hoverLogo} 
-                    alt={`${client.name} hover logo`} 
-                    className="max-w-full max-h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity absolute inset-0 m-auto" 
+                    className="max-w-full max-h-full object-contain opacity-35 hover:opacity-100 transition-opacity duration-300" 
                   />
                 </div>
               ))}
