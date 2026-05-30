@@ -1,12 +1,12 @@
 import React from 'react';
 
 const clients = [
-  { name: "Acme Corp", logo: "/Layers Logo Transperant Background Removed.png" },
-  { name: "Globex", logo: "/redbakery logo.png.avif" },
-  { name: "Initech", logo: "/WS-4.png" },
-  { name: "Umbrella Corp", logo: "/logos/umbrella.svg" },
-  { name: "Hooli", logo: "/logos/hooli.svg" },
-  { name: "Soylent", logo: "/logos/soylent.svg" },
+  { name: "Layers", logo: "/Layers Logo Transperant Background Removed.png" },
+  { name: "Red Bakery", logo: "/redbakery logo.png.avif" },
+  { name: "Bubbles Customs", logo: "/WS-4.png" },
+  { name: "HPRB", logo: "/HPRB Logo White.png" },
+  { name: "CSRP", logo: "/CSRP Logo White.png" },
+  { name: "TSRP", logo: "/TSRP Logo White.png" },
   { name: "Vehement", logo: "/logos/vehement.svg" },
   { name: "Massive Dynamic", logo: "/logos/massive.svg" },
   { name: "Cyberdyne", logo: "/logos/cyberdyne.svg" },
