@@ -19,7 +19,8 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="w-full bg-black pt-20 pb-12 mt-auto border-t border-zinc-900/50">
+    /* ⚡ FIXED COLOR MISMATCH: Changed bg-black to bg-background ⚡ */
+    <footer className="w-full bg-background pt-20 pb-12 mt-auto border-t border-zinc-900/50">
       <div className="w-full px-8 md:px-16 lg:px-24">
         
         {/* Top Row: Brand & Navigation */}
