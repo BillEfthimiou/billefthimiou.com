@@ -15,6 +15,12 @@ export function SmoothScrollProvider({
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
+      
+      /* ⚡ THE ZOOM INTERACTION FIX ⚡ 
+         Calculates the inverted scale ratio (1 / 1.15) so the scroll 
+         delta matches the browser's custom visual layout tracking zoom perfectly. */
+      wheelMultiplier: 0.869,
+      touchMultiplier: 0.869,
     });
 
     function raf(time: number) {
