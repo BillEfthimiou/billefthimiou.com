@@ -13,11 +13,13 @@ interface Project {
 
 const projects: Project[] = [
   { id: 1, title: "Branding Package", image: "/LayersPackage-28.png" }, 
-  { id: 2, title: "Celebration Banner", image: "/Celebration Banner Redbakery ENG.png" },
-  { id: 3, title: "Welcome Banner", image: "/Welcome to HCSO.PNG" },
-  { id: 4, title: "Embed Banner", image: "/Dashboard for Bill Commisions.PNG" },
-  { id: 5, title: "Embed Banner", image: "/Pensylvania State RP Dasjboard.PNG" },
-  { id: 6, title: "Embed Banner", image: "/Texas State RP Dashboard.png" },
+  { id: 2, title: "Logos", image: "/CSRP Logo Showcase.png" },
+  { id: 3, title: "Logos", image: "/TSRP Logo Showcase.png" },
+  { id: 4, title: "Celebration Banner", image: "/Celebration Banner Redbakery ENG.png" },
+  { id: 5, title: "Welcome Banner", image: "/Welcome to HCSO.PNG" },
+  { id: 6, title: "Embed Banner", image: "/Dashboard for Bill Commisions.PNG" },
+  { id: 7, title: "Embed Banner", image: "/Pensylvania State RP Dasjboard.PNG" },
+  { id: 8, title: "Embed Banner", image: "/Texas State RP Dashboard.png" },
 ];
 
 export function PortfolioCarousel() {

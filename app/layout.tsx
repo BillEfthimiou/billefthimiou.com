@@ -11,7 +11,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bill's Studio",
-  description: "Your go to design studio. From complex brand identities to simple graphics we cover your needs.",
+  description: "Custom solutions for web development, design, and branding.",
   generator: "v0.app",
   icons: {
     icon: "/logo.png",
