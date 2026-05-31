@@ -19,34 +19,24 @@ const clients: Client[] = [
     websiteUrl: "http://redbakery.gr/" 
   },
   { 
-    name: "Client Three", 
-    logoUrl: "/logos/client-three.png", 
-    websiteUrl: "https://example.com/three" 
+    name: "Layers", 
+    logoUrl: "/Layers Logo Transperant Background Removed.png", 
+    websiteUrl: "" 
   },
   { 
-    name: "Client Four", 
-    logoUrl: "/logos/client-four.png", 
-    websiteUrl: "https://example.com/four" 
+    name: "CSRP", 
+    logoUrl: "/CSRP Logo White.png", 
+    websiteUrl: "https://discord.gg/VzvVTdyPpX" 
   },
   { 
-    name: "Client Five", 
-    logoUrl: "/logos/client-five.png", 
-    websiteUrl: "https://example.com/five" 
+    name: "TSRP", 
+    logoUrl: "/TSRP Logo White.png", 
+    websiteUrl: "https://example.com/fiv" 
   },
   { 
-    name: "Client Six", 
-    logoUrl: "/logos/client-six.png", 
-    websiteUrl: "https://example.com/six" 
-  },
-  { 
-    name: "Client Seven", 
-    logoUrl: "/logos/client-seven.png", 
-    websiteUrl: "https://example.com/seven" 
-  },
-  { 
-    name: "Client Eight", 
-    logoUrl: "/logos/client-eight.png", 
-    websiteUrl: "https://example.com/eight" 
+    name: "HPRB", 
+    logoUrl: "/HPRB Logo White.png", 
+    websiteUrl: "" 
   },
 ];
 

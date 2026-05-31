@@ -18,7 +18,7 @@ export function TrustedBy() {
     <section className="py-24 px-6 bg-background">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-          Trusted by 10+ clients.
+          Trusted by 7+ clients.
         </h2>
         <p className="text-muted-foreground mb-12">
           Delivering quality work across various projects.
