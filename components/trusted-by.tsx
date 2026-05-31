@@ -7,7 +7,7 @@ const clients = [
   { name: "HPRB", logo: "/HPRB Logo White.png" },
   { name: "CSRP", logo: "/CSRP Logo White.png" },
   { name: "TSRP", logo: "/TSRP Logo White.png" },
-  { name: "Vehement", logo: "/logos/vehement.svg" },
+  { name: "FSRP", logo: "/fsrpgator logo.png" },
   { name: "Massive Dynamic", logo: "/logos/massive.svg" },
   { name: "Cyberdyne", logo: "/logos/cyberdyne.svg" },
   { name: "Tyrell Corp", logo: "/logos/tyrell.svg" },
